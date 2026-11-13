@@ -1,6 +1,6 @@
 ---
-name: CJ-AI Web stack
-description: Stack, ports, auth, production URLs, and database setup for CJ-AI Web.
+name: Delta-Security Web stack
+description: Stack, ports, auth, production URLs, and database setup for Delta-Security Web.
 ---
 
 ## Stack

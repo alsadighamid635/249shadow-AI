@@ -1,4 +1,4 @@
-# CJ-AI — Cybersecurity AI Assistant
+# Delta-Security — Cybersecurity AI Assistant
 
 A terminal-based AI assistant specialized exclusively in cybersecurity and information security. Built with Python, designed to run on Linux and Termux.
 
@@ -72,7 +72,7 @@ You will see:
 ```
 ╔══════════════════════════════════════════════════╗
 ║                                                  ║
-║   CJ-AI                                          ║
+║   Delta-Security                                 ║
 ║   Cybersecurity AI Assistant                     ║
 ║   Version 1.0                                    ║
 ║                                                  ║
@@ -136,7 +136,7 @@ The SQLite database (`database/chat_history.db`) contains four tables:
 |-------|-------------|
 | `users` | User records (username, created_at) |
 | `messages` | All conversation messages (role, content, timestamp) |
-| `unanswered` | Questions CJ-AI couldn't answer — for developer review |
+| `unanswered` | Questions Delta-Security couldn't answer — for developer review |
 | `logs` | System log entries |
 
 ---
@@ -156,7 +156,7 @@ Open `knowledge/knowledge.json` and add a new entry to the `entries` array:
 }
 ```
 
-Make sure the `id` is unique. Restart CJ-AI for the change to take effect.
+Make sure the `id` is unique. Restart Delta-Security for the change to take effect.
 
 ### Method 2 — Use the knowledge_loader API (programmatic)
 
@@ -174,7 +174,7 @@ append_entry(
 
 ### Reviewing Unanswered Questions
 
-Questions that CJ-AI couldn't answer are stored in the `unanswered` table. To review them:
+Questions that Delta-Security couldn't answer are stored in the `unanswered` table. To review them:
 
 ```python
 from database.database import Database
@@ -219,7 +219,7 @@ Both are standard Python packages, compatible with Linux and Termux.
 
 ## Design Principles
 
-- No offensive capabilities — CJ-AI is purely educational and defensive.
+- No offensive capabilities — Delta-Security is purely educational and defensive.
 - No automatic learning from user input — all knowledge additions require developer review.
 - No external API calls — fully offline operation.
 - Modular architecture — each component has a single responsibility.

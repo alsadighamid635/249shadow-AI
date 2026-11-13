@@ -13,13 +13,13 @@ logger = get_logger()
 
 NO_ANSWER_EN = (
     "I don't have a confident answer for that question in my knowledge base.\n"
-    "Your question has been recorded for future review, so we can improve CJ-AI.\n\n"
+    "Your question has been recorded for future review, so we can improve Delta-Security.\n\n"
     "Tip: Try rephrasing your question, or ask about a specific tool or concept."
 )
 
 NO_ANSWER_AR = (
     "لا أملك إجابة مؤكدة لهذا السؤال في قاعدة معرفتي حالياً.\n"
-    "تم تسجيل سؤالك للمراجعة اللاحقة من قِبل المطورين لتحسين CJ-AI.\n\n"
+    "تم تسجيل سؤالك للمراجعة اللاحقة من قِبل المطورين لتحسين Delta-Security.\n\n"
     "تلميح: حاول إعادة صياغة سؤالك، أو اسأل عن أداة أو مفهوم محدد."
 )
 

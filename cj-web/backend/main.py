@@ -1,5 +1,5 @@
 """
-CJ-AI Web — FastAPI backend entry point.
+Delta-Security Web — FastAPI backend entry point.
 
 Startup sequence:
   1. Validate required environment variables (fail fast, clear error)
@@ -86,16 +86,16 @@ async def lifespan(app: FastAPI):
 
     scheduler.start(db, scraper)
 
-    logger.info("CJ-AI Web started successfully.")
+    logger.info("Delta-Security Web started successfully.")
     yield
 
     # ── Shutdown ──────────────────────────────────────────────────────────────
     scheduler.stop()
     db.close()
-    logger.info("CJ-AI Web shut down.")
+    logger.info("Delta-Security Web shut down.")
 
 
-app = FastAPI(title="CJ-AI Web", version="1.0.0", lifespan=lifespan)
+app = FastAPI(title="Delta-Security Web", version="1.0.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,

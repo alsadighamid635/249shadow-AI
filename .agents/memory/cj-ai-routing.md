@@ -1,5 +1,5 @@
 ---
-name: CJ-AI response routing order
+name: Delta-Security response routing order
 description: Critical ordering rule for chat.py response pipeline — scope filter must come last.
 ---
 

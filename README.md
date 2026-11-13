@@ -1,4 +1,4 @@
-# CJ-AI — Cybersecurity AI Assistant
+# Delta-Security — Cybersecurity AI Assistant
 
 An Arabic/English cybersecurity AI assistant built with a RAG (Retrieval-Augmented Generation) architecture. Users can ask questions about penetration testing, malware analysis, networking, CTF challenges, and more — and receive accurate, context-aware answers in their language.
 
@@ -20,7 +20,7 @@ An Arabic/English cybersecurity AI assistant built with a RAG (Retrieval-Augment
 | 🌐 Bilingual | Automatically detects Arabic or English and responds accordingly |
 | 📰 Auto-learning | Background scheduler scrapes RSS feeds every 6 hours |
 | 🛡️ Scope Guard | Politely declines non-cybersecurity questions |
-| 💬 Session Memory | Conversation history stored in SQLite and used as LLM context |
+| 💬 Session Memory | Conversation history stored in PostgreSQL and used as LLM context |
 
 ---
 
@@ -37,7 +37,7 @@ FastAPI Backend  (/api/*)
         │       ├── vectorstore    →  Qdrant Cloud (semantic search)
         │       └── generator      →  Groq LLM (llama-3.3-70b-versatile)
         │
-        ├── Database (SQLite)      →  sessions, messages, sources, logs
+        ├── Database (PostgreSQL)  →  sessions, messages, sources, logs
         └── Scheduler (APScheduler) → RSS / webpage scraping every 6h
 ```
 
@@ -55,7 +55,7 @@ FastAPI Backend  (/api/*)
 | `core/scheduler.py` | Background APScheduler job |
 | `core/security_filter.py` | Keyword-based scope guard |
 | `core/shell_ref.py` | Static reference for common security tools |
-| `database/db.py` | SQLite ORM (sessions, messages, sources) |
+| `database/db.py` | PostgreSQL access (sessions, messages, sources) |
 | `utils/logger.py` | Centralised logging |
 | `utils/text.py` | Text normalization, chunking, language detection |
 | `api/chat.py` | `POST /api/chat` and session management |
@@ -84,7 +84,7 @@ FastAPI Backend  (/api/*)
 | Vector DB | [Qdrant Cloud](https://qdrant.tech) — cosine similarity, 384-dim |
 | Embeddings | `all-MiniLM-L6-v2` (sentence-transformers, runs locally) |
 | Backend | Python 3.11, FastAPI, Uvicorn, APScheduler |
-| Database | SQLite with WAL mode |
+| Database | PostgreSQL |
 | Frontend | React 18, Vite, react-markdown, react-syntax-highlighter |
 | Hosting | Render (backend) + Vercel (frontend) — both free tier |
 
@@ -163,7 +163,7 @@ User question
 4. Scope guard             ──► cybersecurity? → if not, decline politely
       │
       ▼
-5. Persist to SQLite + Qdrant chat memory
+5. Persist to PostgreSQL + Qdrant chat memory
 ```
 
 ---
@@ -182,7 +182,7 @@ Cj/
 │   │   ├── requirements.txt
 │   │   ├── api/               # FastAPI routers
 │   │   ├── core/              # RAG, LLM, vectorstore, scraper
-│   │   ├── database/          # SQLite layer
+│   │   ├── database/          # PostgreSQL layer
 │   │   └── utils/             # logger, text helpers
 │   └── frontend/
 │       ├── src/

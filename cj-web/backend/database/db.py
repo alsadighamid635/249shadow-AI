@@ -1,5 +1,5 @@
 """
-PostgreSQL persistence layer for CJ-AI Web.
+PostgreSQL persistence layer for Delta-Security Web.
 
 Design notes:
   - Uses a ThreadedConnectionPool so each thread gets its own connection

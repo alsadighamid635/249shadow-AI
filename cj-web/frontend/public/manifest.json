@@ -1,7 +1,7 @@
 {
-  "name": "CJ-AI — Cybersecurity Assistant",
-  "short_name": "CJ-AI",
-  "description": "AI-powered cybersecurity knowledge assistant",
+  "name": "Delta-Security — Cybersecurity Assistant",
+  "short_name": "Delta-Security",
+  "description": "A clear, practical cybersecurity assistant",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0d1117",

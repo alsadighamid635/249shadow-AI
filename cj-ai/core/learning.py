@@ -1,5 +1,5 @@
 """
-Learning module — records questions CJ-AI could not answer.
+Learning module — records questions Delta-Security could not answer.
 Developers can later review these via the database and add them
 to knowledge.json using knowledge_loader.append_entry().
 """

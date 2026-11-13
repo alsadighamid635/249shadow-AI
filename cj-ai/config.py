@@ -9,7 +9,7 @@ TRAINING_FILE = KNOWLEDGE_DIR / "training_data.json"
 DB_FILE = DATABASE_DIR / "chat_history.db"
 LOG_FILE = BASE_DIR / "cj_ai.log"
 
-APP_NAME = "CJ-AI"
+APP_NAME = "Delta-Security"
 APP_SUBTITLE = "Cybersecurity AI Assistant"
 APP_VERSION = "1.0"
 

@@ -1,5 +1,5 @@
 /**
- * API client for CJ-AI Web.
+ * API client for Delta-Security Web.
  *
  * Every account holder gets a private JWT (issued by /api/auth/login or
  * /api/auth/signup) which is sent as `Authorization: Bearer <token>` on

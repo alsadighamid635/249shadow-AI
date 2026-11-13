@@ -1,5 +1,5 @@
 """
-RAG (Retrieval-Augmented Generation) pipeline — the core of CJ-AI Web.
+RAG (Retrieval-Augmented Generation) pipeline — the core of Delta-Security Web.
 
 Query flow:
   1. Shell-reference lookup  — instant answers for known security tool commands

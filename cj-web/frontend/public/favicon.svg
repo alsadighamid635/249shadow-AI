@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="20" fill="#0d1117"/>
-  <text x="50" y="72" font-size="60" text-anchor="middle" font-family="monospace" fill="#00d4aa">⚡</text>
+  <rect width="100" height="100" rx="22" fill="#0d1117"/>
+  <path d="M50 12 80 23v23c0 19-12 34-30 43C32 80 20 65 20 46V23z"
+        fill="none" stroke="#00d4aa" stroke-width="6" stroke-linejoin="round"/>
+  <path d="m50 31-15 28h14l-3 16 20-30H51z"
+        fill="#00d4aa"/>
 </svg>

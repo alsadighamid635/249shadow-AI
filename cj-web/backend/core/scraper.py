@@ -18,7 +18,7 @@ import config
 
 logger = get_logger()
 
-_HEADERS = {"User-Agent": "CJ-AI/1.0 (cybersecurity research assistant)"}
+_HEADERS = {"User-Agent": "Delta-Security/1.0 (cybersecurity research assistant)"}
 _TIMEOUT = 15
 
 # SSRF protection — schemes and hosts that must never be fetched

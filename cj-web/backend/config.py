@@ -1,5 +1,5 @@
 """
-Central configuration for CJ-AI Web.
+Central configuration for Delta-Security Web.
 All tuneable values live here so they can be adjusted without touching business logic.
 """
 

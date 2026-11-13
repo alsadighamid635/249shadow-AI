@@ -1,4 +1,4 @@
-# CJ-AI — Cybersecurity AI Assistant
+# Delta-Security — Cybersecurity AI Assistant
 
 A bilingual (Arabic/English) cybersecurity AI assistant using a RAG (Retrieval-Augmented Generation) architecture. Provides context-aware answers on penetration testing, malware analysis, and information security, with a strict "cybersecurity-only" scope guard.
 
@@ -39,7 +39,7 @@ All set as Replit Secrets:
 - **Frontend:** React 18, Vite, react-markdown
 - **LLM:** Groq (`llama-3.3-70b-versatile`)
 - **Vector DB:** Qdrant Cloud with `all-MiniLM-L6-v2` embeddings (fastembed/ONNX)
-- **Auth:** JWT (30-day tokens), bcrypt passwords, SQLite session storage
+- **Auth:** JWT (30-day tokens), bcrypt passwords, PostgreSQL session storage
 - **Auto-learning:** RSS scraper runs every 6 h (Hacker News, Krebs, SANS, SecurityWeek, NVD, BleepingComputer)
 
 ## Admin
@@ -54,7 +54,7 @@ Default admin username: `249shadow` (override with `ADMIN_USERNAME` secret). Adm
 | Backend | Render | https://cj-ww1u.onrender.com |
 
 - `VITE_API_URL` is set on Vercel pointing to the Render backend
-- All 4 backend secrets are set in Render (SESSION_SECRET, GROQ_API_KEY, QDRANT_URL, QDRANT_API_KEY)
+- The backend needs its configured environment variables in Render: `SESSION_SECRET`, `DATABASE_URL`, `GROQ_API_KEY`, and `QDRANT_URL` (plus `QDRANT_API_KEY` for authenticated Qdrant clusters).
 - Frontend uses `yarn` as package manager on Vercel (npm has a bug on Vercel's build environment)
 - Auto-deploy on both platforms triggers from pushes to the `main` branch on GitHub
 

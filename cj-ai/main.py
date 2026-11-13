@@ -1,5 +1,5 @@
 """
-CJ-AI — Cybersecurity AI Assistant
+Delta-Security — Cybersecurity AI Assistant
 Entry point: run with `python main.py`
 """
 
